@@ -4,9 +4,10 @@ import xml.etree.ElementTree as ET
 
 class BankStatementProcessor:
     def __init__(self):
-        self.input_dir = '../data/input_xml'
-        self.output_dir = '../data/processed_csv'
-        self.processed_file = '../data/processed_files.txt'
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.input_dir = os.path.join(base_dir, 'data', 'input_xml')
+        self.output_dir = os.path.join(base_dir, 'data', 'processed_csv')
+        self.processed_file = os.path.join(base_dir, 'data', 'processed_files.txt')
         self.ns = {'ns': 'urn:iso:std:iso:20022:tech:xsd:camt.053.001.02'}
 
     def get_new_files(self):
