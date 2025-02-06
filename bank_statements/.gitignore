@@ -1,3 +1,5 @@
 data/input_xml/* 
 data/processed_csv/* 
 data/processed_files.txt 
+config/credentials.json 
+config/token.pickle 
