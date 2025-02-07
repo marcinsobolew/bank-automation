@@ -1,8 +1,24 @@
-# Bank Automation
+### GŁÓWNY README (dla C:\Users\marci\bank-automation\README.md):
 
-Projekt automatyzacji operacji bankowych składający się z niezależnych modułów.
+# Bank Automation 🏦
 
-## Struktura projektu
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+
+Kompleksowy system automatyzacji operacji bankowych. Projekt składa się z niezależnych modułów do przetwarzania wyciągów bankowych, analizy maili i automatyzacji operacji.
+
+## 📋 Spis treści
+- [Przegląd](#przegląd)
+- [Struktura projektu](#struktura-projektu)
+- [Moduły](#moduły)
+- [Instalacja](#instalacja)
+- [Wymagania](#wymagania-systemowe)
+- [Rozwój projektu](#rozwój-projektu)
+
+## 🔍 Przegląd
+System składa się z niezależnych modułów, które można wykorzystywać osobno lub łączyć w kompleksowe rozwiązanie. Każdy moduł jest odpowiedzialny za konkretny aspekt automatyzacji operacji bankowych.
+
+## 📁 Struktura projektu
 bank-automation/
 ├── src/                      # główne źródła projektu
 │   ├── email/               # moduł pobierania maili bankowych
@@ -17,24 +33,26 @@ bank-automation/
     ├── logs/              # pliki logów
     └── src/               # kod źródłowy modułu
 
-## Moduły
+## 🔧 Moduły
 
 ### 1. Bank Statements Processor
+![Status](https://img.shields.io/badge/Status-Active-green)
+
 Moduł do automatycznego przetwarzania wyciągów bankowych w formacie XML i synchronizacji z Google Sheets.
-- Parsowanie plików XML w standardzie ISO20022
-- Integracja z Google Sheets
-- System logowania
+- ✅ Parsowanie plików XML w standardzie ISO20022
+- ✅ Integracja z Google Sheets
+- ✅ System logowania
 
-[Więcej informacji](bank_statements/README.md)
+[Dokumentacja modułu](bank_statements/README.md)
 
-### 2. Email Processor (w przygotowaniu)
-Moduł do automatycznego pobierania i przetwarzania maili bankowych.
+### 2. Email Processor
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
-## Konfiguracja
+Moduł do automatycznego pobierania i przetwarzania maili bankowych (w przygotowaniu).
 
-Każdy moduł ma własną konfigurację i wymagania. Szczegóły znajdują się w dokumentacji poszczególnych modułów.
+## 🚀 Quick Start
 
-## Wymagania systemowe
-- Python 3.8+
-- Git
-- Dostęp do Google API (dla modułu bank_statements)
+1. Klonowanie repozytorium:
+```bash
+git clone https://github.com/marcinsobolew/bank-automation.git
+cd bank-automation
