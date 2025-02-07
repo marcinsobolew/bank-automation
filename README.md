@@ -24,11 +24,13 @@ bank-automation/
 
 ### 1. Bank Statements Processor
 
-Moduł do automatycznego przetwarzania wyciągów bankowych w formacie XML i synchronizacji z Google Sheets.
+Moduł do automatycznego przetwarzania wyciągów bankowych w formacie XML (CAMT52) i synchronizacji z Google Sheets.
 
-* Parsowanie plików XML w standardzie ISO20022
+* Parsowanie plików XML w standardzie ISO20022 (CAMT52)
+* Konwersja transakcji bankowych z formatu XML na Google Sheets
 * Integracja z Google Sheets
 * System logowania
+* Możliwość pobierania plików XML z Dysku Google
 
 [Więcej informacji](bank_statements/README.md)
 
