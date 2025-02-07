@@ -14,21 +14,31 @@ class SheetsManager:
         self.service = None  # Dodaj to pole
 
     def authenticate(self):
-        creds = None
-        if os.path.exists(self.token_file):
-            with open(self.token_file, 'rb') as token:
-                creds = pickle.load(token)
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    self.credentials_file, self.SCOPES)
-                creds = flow.run_local_server(port=0)
-            with open(self.token_file, 'wb') as token:
-                pickle.dump(creds, token)
-        self.service = build('sheets', 'v4', credentials=creds)
-        return True
+    SCOPES = [
+        'https://www.googleapis.com/auth/spreadsheets',
+        'https://www.googleapis.com/auth/drive.readonly'
+    ]
+    
+    creds = None
+    if os.path.exists(self.token_file):
+        with open(self.token_file, 'rb') as token:
+            creds = pickle.load(token)
+    
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                self.credentials_file, 
+                scopes=SCOPES  # Zmiana tutaj
+            )
+            creds = flow.run_local_server(port=0)
+        
+        with open(self.token_file, 'wb') as token:
+            pickle.dump(creds, token)
+    
+    self.service = build('sheets', 'v4', credentials=creds)
+    return True
 
     def update_sheet(self, data, spreadsheet_id, range_names=['statement!A1']):
     for range_name in range_names:
