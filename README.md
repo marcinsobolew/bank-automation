@@ -3,6 +3,8 @@
 Projekt automatyzacji operacji bankowych składający się z niezależnych modułów.
 
 ## Struktura projektu
+
+<pre>
 bank-automation/
 ├── src/
 │   ├── email/        # moduł pobierania maili bankowych
@@ -10,12 +12,13 @@ bank-automation/
 │   └── utils/        # wspólne narzędzia
 │
 └── bank_statements/    # moduł obsługi wyciągów bankowych
-├── config/        # konfiguracja i dane uwierzytelniające
-├── data/
-│   ├── input_xml/  # pliki XML do przetworzenia
-│   └── processed_csv/ # przetworzone pliki CSV
-├── logs/          # pliki logów
-└── src/          # kod źródłowy modułu
+    ├── config/        # konfiguracja i dane uwierzytelniające
+    ├── data/
+    │   ├── input_xml/  # pliki XML do przetworzenia
+    │   └── processed_csv/ # przetworzone pliki CSV
+    ├── logs/          # pliki logów
+    └── src/          # kod źródłowy modułu
+</pre>
 
 ## Moduły
 
