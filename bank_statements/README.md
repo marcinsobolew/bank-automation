@@ -20,18 +20,21 @@ Moduł do automatycznego przetwarzania wyciągów bankowych w formacie XML i syn
 - Równoczesne logowanie do konsoli i pliku
 
 ## Struktura projektu
+
+<pre>
 bank_statements/
-├── config/              # konfiguracja i dane uwierzytelniające
-│   └── credentials.json # dane dostępowe do Google API
-├── data/               # dane wejściowe i wyjściowe
-│   ├── input_xml/      # pliki XML do przetworzenia
-│   └── processed_csv/  # przetworzone pliki CSV
-├── logs/              # pliki logów
-└── src/               # kod źródłowy
-    ├── file_processor.py   # przetwarzanie plików XML
-    ├── sheets_manager.py   # integracja z Google Sheets
-    ├── logger.py          # system logowania
-    └── main.py           # główny skrypt
+├── config/             # Konfiguracja i dane uwierzytelniające
+│   └── credentials.json  # Dane dostępowe do Google API
+├── data/               # Dane wejściowe i wyjściowe
+│   ├── input_xml/      # Pliki XML do przetworzenia
+│   └── processed_csv/   # Przetworzone pliki CSV
+├── logs/               # Pliki logów
+└── src/                # Kod źródłowy
+    ├── file_processor.py  # Przetwarzanie plików XML
+    ├── sheets_manager.py # Integracja z Google Sheets
+    ├── logger.py        # System logowania
+    └── main.py          # Główny skrypt
+</pre>
 
 ## Konfiguracja i uruchomienie
 
